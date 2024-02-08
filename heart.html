@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1{
+            height: 200px;
+            width: 200px;
+            background-color:  rgb(202, 30, 53);
+            text-align: center;
+            rotate: 45deg;
+            animation: heart 2s infinite;
+        }
+        h1::before,h1::after{
+            content: "";
+            height: 200px;
+            width: 200px;
+            background-color: rgb(202, 30, 53);
+            border-radius: 50%;
+            position: absolute;
+        }
+        h1::after{
+            top: -100px;
+            right: 0px;
+        }
+        h1::before{
+            top: 0;
+            left: -100px;
+        }
+        .div1{
+            display: flex;
+            position: absolute;
+            height: 100vh;
+            width: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .div1 span{
+            font-weight: 900;
+            font-size: 50px;
+            animation: heart 2s infinite;
+        }
+
+       @keyframes heart {
+            0%{
+                transform: scale(1);
+            }
+            25%{
+                transform: scale(2);
+            }
+            50%{
+                transform: scale(2.5);
+            }
+       }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <h1></h1>
+        <div class="div1">
+            <span>__________</span>
+        </div>
+    </div>
+</body>
+</html>
